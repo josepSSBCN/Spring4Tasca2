@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "b2362f55-e353-4900-aab1-bca3d94a88bd",
+		"name": "S04T02N03",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ServerPort}}{{Document}}/delete/6407620bc574c017fdb3fe20",
+					"host": [
+						"{{ServerPort}}{{Document}}"
+					],
+					"path": [
+						"delete",
+						"6407620bc574c017fdb3fe20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ServerPort}}{{Document}}/getAll",
+					"host": [
+						"{{ServerPort}}{{Document}}"
+					],
+					"path": [
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request GetOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ServerPort}}{{Document}}/getOne/64076216c574c017fdb3fe21",
+					"host": [
+						"{{ServerPort}}{{Document}}"
+					],
+					"path": [
+						"getOne",
+						"64076216c574c017fdb3fe21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request ADD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"id\": \"\",\r\n    \"nom\":\"Llimona2\",\r\n    \"quantitatQuilos\":11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ServerPort}}{{Document}}/add",
+					"host": [
+						"{{ServerPort}}{{Document}}"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"64076216c574c017fdb3fe21\",\r\n    \"nom\":\"Poma\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ServerPort}}{{Document}}/update",
+					"host": [
+						"{{ServerPort}}{{Document}}"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ServerPort",
+			"value": "http://localhost:8080",
+			"type": "default"
+		},
+		{
+			"key": "Document",
+			"value": "/fruita",
+			"type": "default"
+		}
+	]
+}

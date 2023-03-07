@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "c828203e-288b-4687-a790-01198e4fbedc",
+		"name": "S04T02N01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ServerPort}}{{Taula}}/delete/10",
+					"host": [
+						"{{ServerPort}}{{Taula}}"
+					],
+					"path": [
+						"delete",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ServerPort}}{{Taula}}/getAll",
+					"host": [
+						"{{ServerPort}}{{Taula}}"
+					],
+					"path": [
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request GetOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ServerPort}}{{Taula}}/getOne/1",
+					"host": [
+						"{{ServerPort}}{{Taula}}"
+					],
+					"path": [
+						"getOne",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request ADD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\":\"Platan\",\r\n    \"quantitatQuilos\":15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ServerPort}}{{Taula}}/add",
+					"host": [
+						"{{ServerPort}}{{Taula}}"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2,\r\n    \"nom\":\"Pera\",\r\n    \"quantitatQuilos\":23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ServerPort}}{{Taula}}/update",
+					"host": [
+						"{{ServerPort}}{{Taula}}"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ServerPort",
+			"value": "http://localhost:8080",
+			"type": "default"
+		},
+		{
+			"key": "Taula",
+			"value": "/fruita",
+			"type": "default"
+		}
+	]
+}
